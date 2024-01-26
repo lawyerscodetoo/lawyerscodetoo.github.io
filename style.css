@@ -1,3 +1,11 @@
+/* COUNTDOWN */
+#countdown {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
 /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
