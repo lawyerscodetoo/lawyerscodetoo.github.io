@@ -36,5 +36,32 @@
         </div>
       </div>
     </nav>
+  <div> id="countdown"></div>
+  
+<script>
+  // Set the date for the countdown (replace with your desired date)
+    const countdownDate = new Date("2024-03-06T13:00:00").getTime();
+
+    // Update the countdown every second
+    const countdownInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      // Calculate days, hours, minutes
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      // Display the countdown
+      document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m`;
+
+      // If the countdown is over, clear the interval
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+  
   </body>
 </html>
